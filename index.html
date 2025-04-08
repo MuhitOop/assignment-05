@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="src/output.css" />
   </head>
   <body>
-    <section class="bg-primary-bg py-8">
+    <section id="root" class="bg-primary-bg py-8">
       <section class="w-[1535px] mx-auto">
         <header class="p-4 bg-secondary-bg rounded-2xl">
           <div class="flex justify-between items-center">
@@ -22,7 +22,7 @@
                 class="p-4 flex items-center gap-3 rounded-4xl bg-primary-bg"
               >
                 <img src="assets/checkbox.png" alt="check-box" />
-                <h1 id="task-counter" class="text-3xl font-bold">23</h1>
+                <h1 id="completeTaskNumber" class="text-3xl font-bold">23</h1>
               </div>
 
               <div
@@ -45,12 +45,12 @@
                   </div>
                   <div class="flex flex-col justify-center">
                     <h3 class="font-medium text-text-primary">Task Assigned</h3>
-                    <h1 class="font-bold text-3xl">05</h1>
+                    <h1 id="assignedTaskNumber" class="font-bold text-3xl">06</h1>
                   </div>
                 </div>
               </div>
-              <div
-                class="bg-primary-bg col-span-2 rounded-2xl p-5 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]"
+              <div id="blogPage"
+                class="bg-primary-bg col-span-2 rounded-2xl p-5 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer"
               >
                 <div class="flex">
                   <img src="./assets/board.png" alt="board" />
@@ -65,8 +65,8 @@
                     <img src="./assets/calender.png" alt="calender" />
                   </div>
                   <div class="flex flex-col justify-center">
-                    <h3 class="font-normal text-xl text-text-primary">Wed ,</h3>
-                    <h1 class="font-bold text-xl">Jul 28 2025</h1>
+                    <h3 class="font-normal text-xl text-text-primary"><span id="day">Wed</span> ,</h3>
+                    <h1 class="font-bold text-xl"><span id="month">Jul</span> <span id="date">28</span> <span id="year">2025</span></h1>
                   </div>
                 </div>
               </div>
@@ -99,9 +99,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
-                  >
+                  <button id="complete-btn-0"
+                    class="completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
+                   ">
                     Completed
                   </button>
                 </div>
@@ -130,9 +130,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer" disabled
-                  >
+                  <button id="complete-btn-1"
+                    class="completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer" 
+                  ">
                     Completed
                   </button>
                 </div>
@@ -161,9 +161,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
-                  >
+                  <button id="complete-btn-2"
+                    class="completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
+                  ">
                     Completed
                   </button>
                 </div>
@@ -192,9 +192,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
-                  >
+                  <button id="complete-btn-3"
+                    class="completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
+                  ">
                     Completed
                   </button>
                 </div>
@@ -223,9 +223,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
-                  >
+                  <button id="complete-btn-4"
+                    class= "completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
+                  ">
                     Completed
                   </button>
                 </div>
@@ -254,9 +254,9 @@
                     </h4>
                     <h2 class="font-medium text-text-primary">21 March 2025</h2>
                   </div>
-                  <button id="complete-btn"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
-                  >
+                  <button id="complete-btn-5"
+                    class="completeBtn bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-[8px] cursor-pointer"
+                  ">
                     Completed
                   </button>
                 </div>
@@ -286,5 +286,10 @@
         </section>
       </section>
     </section>
+
+    <script src="js/changeBgColor.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dateAndTime.js"></script>
+
   </body>
 </html>
