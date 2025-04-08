@@ -31,8 +31,17 @@
               the DOM?
             </div>
             <div class="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the
-              registration process.
+              <p>
+                In JavaScript, there are several methods to select elements in
+                the (DOM). Each method has its own use case. Here's some example
+                of the different ways to select DOM element: <br />
+                1. getElementById <br />
+                2. getElementsByClassName <br />
+                3. getElementsByTagName <br />
+                4. querySelector <br />
+                5. querySelectorAll <br />
+                6. getElementsByName
+              </p>
             </div>
           </div>
           <div
@@ -44,8 +53,16 @@
               and textContent ?
             </div>
             <div class="collapse-content text-sm">
-              Click on "Forgot Password" on the login page and follow the
-              instructions sent to your email.
+              <p>
+                Here's the difference between innerHTML, innerText, and
+                textContent: <br />
+                innerHTML: Gets or Sets the HTML markup inside an element.
+                <br />
+                innerText: Gets or Sets only visible text content of an element.
+                <br />
+                innerContent: Gets or Sets all text content within an element,
+                including hidden text and script/style content.
+              </p>
             </div>
           </div>
           <div
@@ -56,8 +73,7 @@
               Question-3: What is event delegation in the DOM?
             </div>
             <div class="collapse-content text-sm">
-              Go to "My Account" settings and select "Edit Profile" to make
-              changes.
+              <p>Event delegation in the DOM is a technique in JavaScript where you attach a single event listener to a parent element to handle events triggered by its child elements, instead of attaching individual event listeners to each child.</p>
             </div>
           </div>
           <div
@@ -68,8 +84,7 @@
               Question-4: What is event bubbling in the DOM?
             </div>
             <div class="collapse-content text-sm">
-              Go to "My Account" settings and select "Edit Profile" to make
-              changes.
+              Event bubbling in the DOM is a mechanism where an event triggered on an element propagates through its ancestor elements in the DOM hierarchy, from the target element up to the root. It’s a default behavior for most events in JavaScript and is the foundation for techniques like event delegation.
             </div>
           </div>
           <div
@@ -81,8 +96,14 @@
               JavaScript?
             </div>
             <div class="collapse-content text-sm">
-              Go to "My Account" settings and select "Edit Profile" to make
-              changes.
+              <p>In JavaScript, you can create, add, and remove elements in the DOM dynamically using a variety of methods. Here's some example: <br>
+                1.Creating Elements: <br>
+                We can create new DOM elements using document.createElement(). <br>
+                2.Adding Elements: <br>
+                We can add elements to the DOM using methods like appendChild(), append(), prepend(), insertBefore(), or by setting innerHTML. <br>
+                3. Removing Elements: <br>
+                We can remove elements using remove(), removeChild(), or by manipulating parent references.
+              </p>
             </div>
           </div>
         </section>
@@ -90,9 +111,9 @@
     </section>
 
     <script>
-        document.getElementById('backBtn').addEventListener('click', ()=>{
-            window.location.href = 'index.html';
-        })
+      document.getElementById("backBtn").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
     </script>
   </body>
 </html>

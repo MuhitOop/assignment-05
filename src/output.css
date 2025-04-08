@@ -53,6 +53,7 @@
     --color-primary-bg: rgb(244, 247, 255);
     --color-secondary-bg: rgb(255,255,255);
     --color-text-primary: rgb(0, 48, 60);
+    --color-dis-color: rgb(55, 82, 253, 0.2);
   }
 }
 @layer base {
@@ -4459,6 +4460,9 @@
       }
     }
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
@@ -6764,8 +6768,8 @@
   .bg-blue-600 {
     background-color: var(--color-blue-600);
   }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
+  .bg-dis-color {
+    background-color: var(--color-dis-color);
   }
   .bg-primary-bg {
     background-color: var(--color-primary-bg);

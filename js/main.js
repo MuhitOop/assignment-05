@@ -24,17 +24,37 @@ completeBtn.forEach((btn) => {
     completeTaskNum.innerText = completeTask;
 
     btn.classList.remove("bg-blue-500", "hover:bg-blue-600", "cursor-pointer");
-    btn.classList.add("bg-gray-500", "line-through");
-    btn.innerText = "Task Completed";
+    btn.classList.add("bg-dis-color");
 
     btn.disabled = true;
 
+    // Activity log
+    const now = new Date();
+    const formattedTime = now.toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+    const taskCard = btn.closest(".p-6");
+    const taskNameElement = taskCard.querySelector("h1");
+    const taskName = taskNameElement.innerText;
 
-    // Activity log 
-    
-    
+
+    const historyMsgDiv = document.createElement("div");
+    historyMsgDiv.className = "rounded-[8px] bg-primary-bg p-2.5 my-2";
+    historyMsgDiv.innerHTML = `<p class="text-gray-500">You have Complete The ${taskName} at ${formattedTime}</p>`;
+
+    historyContainer.appendChild(historyMsgDiv);
+
+    window.alert("Board updated successfully");
+
+    if (assignTask === 0) {
+      window.alert("Congrats!! You have completed all the tasks");
+    }
   });
 });
 
-
-
+clearHistoryBtn.addEventListener("click", () => {
+  historyContainer.innerHTML = "";
+});
